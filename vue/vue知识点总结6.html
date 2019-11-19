@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue.js - day6 | 个人主页</title>
+    <meta name="description" content="小乔的博客">
+    <link rel="icon" href="/myBlog/img/hero.jpg">
+  <link rel="manifest" href="manifest.json">
+    
+    <link rel="preload" href="/myBlog/assets/css/0.styles.9fb07b12.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.2b5d794d.js" as="script"><link rel="preload" href="/myBlog/assets/js/3.b596bbc9.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.61186235.js" as="script"><link rel="preload" href="/myBlog/assets/js/41.12835e45.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.e0534ab1.js"><link rel="prefetch" href="/myBlog/assets/js/11.cbd893a6.js"><link rel="prefetch" href="/myBlog/assets/js/12.44e232e1.js"><link rel="prefetch" href="/myBlog/assets/js/13.489b227a.js"><link rel="prefetch" href="/myBlog/assets/js/14.7f406a9a.js"><link rel="prefetch" href="/myBlog/assets/js/15.04b649e2.js"><link rel="prefetch" href="/myBlog/assets/js/16.4a702ad8.js"><link rel="prefetch" href="/myBlog/assets/js/17.d4d5b2c5.js"><link rel="prefetch" href="/myBlog/assets/js/18.17739185.js"><link rel="prefetch" href="/myBlog/assets/js/19.d540854d.js"><link rel="prefetch" href="/myBlog/assets/js/20.c43d7681.js"><link rel="prefetch" href="/myBlog/assets/js/21.a06df83b.js"><link rel="prefetch" href="/myBlog/assets/js/22.0bf32220.js"><link rel="prefetch" href="/myBlog/assets/js/23.0e76d5ce.js"><link rel="prefetch" href="/myBlog/assets/js/24.c83f0a7e.js"><link rel="prefetch" href="/myBlog/assets/js/25.7c2c4d44.js"><link rel="prefetch" href="/myBlog/assets/js/26.56735bb3.js"><link rel="prefetch" href="/myBlog/assets/js/27.ea8aa5bd.js"><link rel="prefetch" href="/myBlog/assets/js/28.c2e8e7d6.js"><link rel="prefetch" href="/myBlog/assets/js/29.9970a0f9.js"><link rel="prefetch" href="/myBlog/assets/js/30.53b2abbe.js"><link rel="prefetch" href="/myBlog/assets/js/31.013d3595.js"><link rel="prefetch" href="/myBlog/assets/js/32.b8cec778.js"><link rel="prefetch" href="/myBlog/assets/js/33.a0e1dbad.js"><link rel="prefetch" href="/myBlog/assets/js/34.e649f97d.js"><link rel="prefetch" href="/myBlog/assets/js/35.4bccea00.js"><link rel="prefetch" href="/myBlog/assets/js/36.d78a4b07.js"><link rel="prefetch" href="/myBlog/assets/js/37.d62a26a1.js"><link rel="prefetch" href="/myBlog/assets/js/38.da50f6d9.js"><link rel="prefetch" href="/myBlog/assets/js/39.76d3c221.js"><link rel="prefetch" href="/myBlog/assets/js/4.863ffd3d.js"><link rel="prefetch" href="/myBlog/assets/js/40.ddb761de.js"><link rel="prefetch" href="/myBlog/assets/js/42.d7bf0371.js"><link rel="prefetch" href="/myBlog/assets/js/43.6ba3d6e1.js"><link rel="prefetch" href="/myBlog/assets/js/44.f5d01eae.js"><link rel="prefetch" href="/myBlog/assets/js/45.102b849d.js"><link rel="prefetch" href="/myBlog/assets/js/46.d9bd6aeb.js"><link rel="prefetch" href="/myBlog/assets/js/47.fe5ac818.js"><link rel="prefetch" href="/myBlog/assets/js/5.a260777e.js"><link rel="prefetch" href="/myBlog/assets/js/6.8b1241c5.js"><link rel="prefetch" href="/myBlog/assets/js/7.142eb4ea.js"><link rel="prefetch" href="/myBlog/assets/js/8.4b0ead93.js"><link rel="prefetch" href="/myBlog/assets/js/9.04b00d25.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.9fb07b12.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><!----> <span class="site-name">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS" class="dropdown-title"><span class="title">JS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/javascript/" class="nav-link">javascript</a></li><li class="dropdown-item"><!----> <a href="/myBlog/ECMAScript6/" class="nav-link">ES6</a></li><li class="dropdown-item"><!----> <a href="/myBlog/jQuery/" class="nav-link">jQuery</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/myBlog/React/" class="nav-link">React</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/html/" class="nav-link">Html和CSS</a></div><div class="nav-item"><a href="https://joe2.site/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/L-joy/myBlog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myBlog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS" class="dropdown-title"><span class="title">JS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/javascript/" class="nav-link">javascript</a></li><li class="dropdown-item"><!----> <a href="/myBlog/ECMAScript6/" class="nav-link">ES6</a></li><li class="dropdown-item"><!----> <a href="/myBlog/jQuery/" class="nav-link">jQuery</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/myBlog/React/" class="nav-link">React</a></li></ul></div></div><div class="nav-item"><a href="/myBlog/html/" class="nav-link">Html和CSS</a></div><div class="nav-item"><a href="https://joe2.site/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/L-joy/myBlog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/myBlog/vue/vue知识.html" class="sidebar-link">冒泡事件</a></li><li><a href="/myBlog/vue/防抖和节流.html" class="sidebar-link">防抖和节流</a></li><li><a href="/myBlog/vue/vue项目路由配置.html" class="sidebar-link">/vue/vue项目路由配置.html</a></li><li><a href="/myBlog/vue/简单理解Vue中的nextTick.html" class="sidebar-link">/vue/简单理解Vue中的nextTick.html</a></li><li><a href="/myBlog/vue/vue知识点总结1.html" class="sidebar-link">Vue.js - Day1</a></li><li><a href="/myBlog/vue/vue知识点总结2.html" class="sidebar-link">Vue.js - Day2</a></li><li><a href="/myBlog/vue/vue知识点总结3.html" class="sidebar-link">Vue.js - Day3</a></li><li><a href="/myBlog/vue/vue知识点总结4.html" class="sidebar-link">Vue.js - Day4</a></li><li><a href="/myBlog/vue/vue知识点总结5.html" class="sidebar-link">Vue.js - Day5 - Webpack</a></li><li><a href="/myBlog/vue/vue知识点总结6.html" class="active sidebar-link">Vue.js - day6</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#注意：" class="sidebar-link">注意：</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#在普通页面中使用render函数渲染组件" class="sidebar-link">在普通页面中使用render函数渲染组件</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#在webpack中配置-vue组件页面的解析" class="sidebar-link">在webpack中配置.vue组件页面的解析</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#在使用webpack构建的vue项目中使用模板对象？" class="sidebar-link">在使用webpack构建的Vue项目中使用模板对象？</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#es6中语法使用总结" class="sidebar-link">ES6中语法使用总结</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#在vue组件页面中，集成vue-router路由模块" class="sidebar-link">在vue组件页面中，集成vue-router路由模块</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#组件中的css作用域问题" class="sidebar-link">组件中的css作用域问题</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#抽离路由为单独的模块" class="sidebar-link">抽离路由为单独的模块</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#使用-饿了么的-mintui-组件" class="sidebar-link">使用 饿了么的 MintUI 组件</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#使用-mui-组件" class="sidebar-link">使用 MUI 组件</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#将项目源码托管到oschina中" class="sidebar-link">将项目源码托管到oschina中</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#app-vue-组件的基本设置" class="sidebar-link">App.vue 组件的基本设置</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#实现-tabbar-页签不同组件页面的切换" class="sidebar-link">实现 tabbar 页签不同组件页面的切换</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#使用-mt-swipe-轮播图组件" class="sidebar-link">使用 mt-swipe 轮播图组件</a></li><li class="sidebar-sub-header"><a href="/myBlog/vue/vue知识点总结6.html#在-vue组件中使用vue-resource获取数据" class="sidebar-link">在.vue组件中使用vue-resource获取数据</a></li></ul></li><li><a href="/myBlog/vue/vue知识点总结7.html" class="sidebar-link">day7</a></li><li><a href="/myBlog/vue/vue知识点总结8.html" class="sidebar-link">day8</a></li><li><a href="/myBlog/vue/vue知识点总结10.html" class="sidebar-link">Day10</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue-js-day6"><a href="#vue-js-day6" class="header-anchor">#</a> Vue.js - day6</h1> <h2 id="注意："><a href="#注意：" class="header-anchor">#</a> 注意：</h2> <p>有时候使用<code>npm i node-sass -D</code>装不上，这时候，就必须使用 <code>cnpm i node-sass -D</code></p> <h2 id="在普通页面中使用render函数渲染组件"><a href="#在普通页面中使用render函数渲染组件" class="header-anchor">#</a> 在普通页面中使用render函数渲染组件</h2> <h2 id="在webpack中配置-vue组件页面的解析"><a href="#在webpack中配置-vue组件页面的解析" class="header-anchor">#</a> 在webpack中配置.vue组件页面的解析</h2> <ol><li><p>运行<code>cnpm i vue -S</code>将vue安装为运行依赖；</p></li> <li><p>运行<code>cnpm i vue-loader vue-template-compiler -D</code>将解析转换vue的包安装为开发依赖；</p></li> <li><p>运行<code>cnpm i style-loader css-loader -D</code>将解析转换CSS的包安装为开发依赖，因为.vue文件中会写CSS样式；</p></li> <li><p>在<code>webpack.config.js</code>中，添加如下<code>module</code>规则：</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+module: {
+
+    rules: [
+
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+
+      { test: /\.vue$/, use: 'vue-loader' }
+
+    ]
+
+  }
+
+</code></pre></div><ol start="5"><li>创建<code>App.js</code>组件页面：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+    &lt;template&gt;
+
+      &lt;!-- 注意：在 .vue 的组件中，template 中必须有且只有唯一的根元素进行包裹，一般都用 div 当作唯一的根元素 --&gt;
+
+      &lt;div&gt;
+
+        &lt;h1&gt;这是APP组件 - {{msg}}&lt;/h1&gt;
+
+        &lt;h3&gt;我是h3&lt;/h3&gt;
+
+      &lt;/div&gt;
+
+    &lt;/template&gt;
+
+
+
+    &lt;script&gt;
+
+    // 注意：在 .vue 的组件中，通过 script 标签来定义组件的行为，需要使用 ES6 中提供的 export default 方式，导出一个vue实例对象
+
+    export default {
+
+      data() {
+
+        return {
+
+          msg: 'OK'
+
+        }
+
+      }
+
+    }
+
+    &lt;/script&gt;
+
+
+
+    &lt;style scoped&gt;
+
+    h1 {
+
+      color: red;
+
+    }
+
+    &lt;/style&gt;
+
+</code></pre></div><ol start="6"><li>创建<code>main.js</code>入口文件：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+    // 导入 Vue 组件
+
+    import Vue from 'vue'
+
+
+
+    // 导入 App组件
+
+    import App from './components/App.vue'
+
+
+
+    // 创建一个 Vue 实例，使用 render 函数，渲染指定的组件
+
+    var vm = new Vue({
+
+      el: '#app',
+
+      render: c =&gt; c(App)
+
+    });
+
+</code></pre></div><h2 id="在使用webpack构建的vue项目中使用模板对象？"><a href="#在使用webpack构建的vue项目中使用模板对象？" class="header-anchor">#</a> 在使用webpack构建的Vue项目中使用模板对象？</h2> <ol><li>在<code>webpack.config.js</code>中添加<code>resolve</code>属性：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  }
+</code></pre></div><h2 id="es6中语法使用总结"><a href="#es6中语法使用总结" class="header-anchor">#</a> ES6中语法使用总结</h2> <ol><li><p>使用 <code>export default</code> 和 <code>export</code> 导出模块中的成员; 对应ES5中的 <code>module.exports</code> 和 <code>export</code></p></li> <li><p>使用 <code>import ** from **</code> 和 <code>import '路径'</code> 还有 <code>import {a, b} from '模块标识'</code> 导入其他模块</p></li> <li><p>使用箭头函数：<code>(a, b)=&gt; { return a-b; }</code></p></li></ol> <h2 id="在vue组件页面中，集成vue-router路由模块"><a href="#在vue组件页面中，集成vue-router路由模块" class="header-anchor">#</a> 在vue组件页面中，集成vue-router路由模块</h2> <p><a href="https://router.vuejs.org/" target="_blank" rel="noopener noreferrer">vue-router官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ol><li>导入路由模块：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+import VueRouter from 'vue-router'
+
+</code></pre></div><ol start="2"><li>安装路由模块：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+Vue.use(VueRouter);
+
+</code></pre></div><ol start="3"><li>导入需要展示的组件:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+import login from './components/account/login.vue'
+
+import register from './components/account/register.vue'
+
+</code></pre></div><ol start="4"><li>创建路由对象:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+var router = new VueRouter({
+
+  routes: [
+
+    { path: '/', redirect: '/login' },
+
+    { path: '/login', component: login },
+
+    { path: '/register', component: register }
+
+  ]
+
+});
+
+</code></pre></div><ol start="5"><li>将路由对象，挂载到 Vue 实例上:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+var vm = new Vue({
+
+  el: '#app',
+
+  // render: c =&gt; { return c(App) }
+
+  render(c) {
+
+    return c(App);
+
+  },
+
+  router // 将路由对象，挂载到 Vue 实例上
+
+});
+
+</code></pre></div><ol start="6"><li>改造App.vue组件，在 template 中，添加<code>router-link</code>和<code>router-view</code>：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+    &lt;router-link to=&quot;/login&quot;&gt;登录&lt;/router-link&gt;
+
+    &lt;router-link to=&quot;/register&quot;&gt;注册&lt;/router-link&gt;
+
+
+
+    &lt;router-view&gt;&lt;/router-view&gt;
+
+</code></pre></div><h2 id="组件中的css作用域问题"><a href="#组件中的css作用域问题" class="header-anchor">#</a> 组件中的css作用域问题</h2> <h2 id="抽离路由为单独的模块"><a href="#抽离路由为单独的模块" class="header-anchor">#</a> 抽离路由为单独的模块</h2> <h2 id="使用-饿了么的-mintui-组件"><a href="#使用-饿了么的-mintui-组件" class="header-anchor">#</a> 使用 饿了么的 MintUI 组件</h2> <p><a href="https://github.com/ElemeFE/mint-ui" target="_blank" rel="noopener noreferrer">Github 仓储地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="http://mint-ui.github.io/#!/zh-cn" target="_blank" rel="noopener noreferrer">Mint-UI官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ol><li>导入所有MintUI组件：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+import MintUI from 'mint-ui'
+
+</code></pre></div><ol start="2"><li>导入样式表：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+import 'mint-ui/lib/style.css'
+
+</code></pre></div><ol start="3"><li>在 vue 中使用 MintUI：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+Vue.use(MintUI)
+
+</code></pre></div><ol start="4"><li>使用的例子：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+&lt;mt-button type=&quot;primary&quot; size=&quot;large&quot;&gt;primary&lt;/mt-button&gt;
+
+</code></pre></div><h2 id="使用-mui-组件"><a href="#使用-mui-组件" class="header-anchor">#</a> 使用 MUI 组件</h2> <p><a href="http://dev.dcloud.net.cn/mui/" target="_blank" rel="noopener noreferrer">官网首页<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="http://dev.dcloud.net.cn/mui/ui/" target="_blank" rel="noopener noreferrer">文档地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ol><li>导入 MUI 的样式表：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+import '../lib/mui/css/mui.min.css'
+
+</code></pre></div><ol start="2"><li>在<code>webpack.config.js</code>中添加新的loader规则：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+{ test: /\.(png|jpg|gif|ttf)$/, use: 'url-loader' }
+
+</code></pre></div><ol start="3"><li>根据官方提供的文档和example，尝试使用相关的组件</li></ol> <h2 id="将项目源码托管到oschina中"><a href="#将项目源码托管到oschina中" class="header-anchor">#</a> 将项目源码托管到oschina中</h2> <ol><li><p>点击头像 -&gt; 修改资料 -&gt; SSH公钥 <a href="http://git.mydoc.io/?t=154712" target="_blank" rel="noopener noreferrer">如何生成SSH公钥<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p>创建自己的空仓储，使用 <code>git config --global user.name &quot;用户名&quot;</code> 和 <code>git config --global user.email ***@**.com</code> 来全局配置提交时用户的名称和邮箱</p></li> <li><p>使用 <code>git init</code> 在本地初始化项目</p></li> <li><p>使用 <code>touch README.md</code> 和 <code>touch .gitignore</code> 来创建项目的说明文件和忽略文件；</p></li> <li><p>使用 <code>git add .</code> 将所有文件托管到 git 中</p></li> <li><p>使用 <code>git commit -m &quot;init project&quot;</code> 将项目进行本地提交</p></li> <li><p>使用 <code>git remote add origin 仓储地址</code>将本地项目和远程仓储连接，并使用origin最为远程仓储的别名</p></li> <li><p>使用 <code>git push -u origin master</code> 将本地代码push到仓储中</p></li></ol> <h2 id="app-vue-组件的基本设置"><a href="#app-vue-组件的基本设置" class="header-anchor">#</a> App.vue 组件的基本设置</h2> <ol><li><p>头部的固定导航栏使用 <code>Mint-UI</code> 的 <code>Header</code> 组件；</p></li> <li><p>底部的页签使用 <code>mui</code> 的 <code>tabbar</code>;</p></li> <li><p>购物车的图标，使用 <code>icons-extra</code> 中的 <code>mui-icon-extra mui-icon-extra-cart</code>，同时，应该把其依赖的字体图标文件 <code>mui-icons-extra.ttf</code>，复制到 <code>fonts</code> 目录下！</p></li> <li><p>将底部的页签，改造成 <code>router-link</code> 来实现单页面的切换；</p></li> <li><p>Tab Bar 路由激活时候设置高亮的两种方式：</p></li></ol> <ul><li>全局设置样式如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>
+	.router-link-active{
+
+     	color:#007aff !important;
+
+   }
+
+</code></pre></div><ul><li>或者在 <code>new VueRouter</code> 的时候，通过 <code>linkActiveClass</code> 来指定高亮的类：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>
+	// 创建路由对象
+
+   var router = new VueRouter({
+
+     routes: [
+
+       { path: '/', redirect: '/home' }
+
+     ],
+
+     linkActiveClass: 'mui-active'
+
+   });
+
+</code></pre></div><h2 id="实现-tabbar-页签不同组件页面的切换"><a href="#实现-tabbar-页签不同组件页面的切换" class="header-anchor">#</a> 实现 tabbar 页签不同组件页面的切换</h2> <ol><li><p>将 tabbar 改造成 <code>router-link</code> 形式，并指定每个连接的 <code>to</code> 属性；</p></li> <li><p>在入口文件中导入需要展示的组件，并创建路由对象：</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+    // 导入需要展示的组件
+
+    import Home from './components/home/home.vue'
+
+    import Member from './components/member/member.vue'
+
+    import Shopcar from './components/shopcar/shopcar.vue'
+
+    import Search from './components/search/search.vue'
+
+
+
+    // 创建路由对象
+
+    var router = new VueRouter({
+
+      routes: [
+
+        { path: '/', redirect: '/home' },
+
+        { path: '/home', component: Home },
+
+        { path: '/member', component: Member },
+
+        { path: '/shopcar', component: Shopcar },
+
+        { path: '/search', component: Search }
+
+      ],
+
+      linkActiveClass: 'mui-active'
+
+    });
+
+</code></pre></div><h2 id="使用-mt-swipe-轮播图组件"><a href="#使用-mt-swipe-轮播图组件" class="header-anchor">#</a> 使用 mt-swipe 轮播图组件</h2> <ol><li>假数据：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+lunbo: [
+
+        'http://www.itcast.cn/images/slidead/BEIJING/2017440109442800.jpg',
+
+        'http://www.itcast.cn/images/slidead/BEIJING/2017511009514700.jpg',
+
+        'http://www.itcast.cn/images/slidead/BEIJING/2017421414422600.jpg'
+
+      ]
+
+</code></pre></div><ol start="2"><li>引入轮播图组件：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+&lt;!-- Mint-UI 轮播图组件 --&gt;
+
+    &lt;div class=&quot;home-swipe&quot;&gt;
+
+      &lt;mt-swipe :auto=&quot;4000&quot;&gt;
+
+        &lt;mt-swipe-item v-for=&quot;(item, i) in lunbo&quot; :key=&quot;i&quot;&gt;
+
+          &lt;img :src=&quot;item&quot; alt=&quot;&quot;&gt;
+
+        &lt;/mt-swipe-item&gt;
+
+      &lt;/mt-swipe&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+</code></pre></div><h2 id="在-vue组件中使用vue-resource获取数据"><a href="#在-vue组件中使用vue-resource获取数据" class="header-anchor">#</a> 在<code>.vue</code>组件中使用<code>vue-resource</code>获取数据</h2> <ol><li><p>运行<code>cnpm i vue-resource -S</code>安装模块</p></li> <li><p>导入 vue-resource 组件</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+import VueResource from 'vue-resource'
+
+</code></pre></div><ol start="3"><li>在vue中使用 vue-resource 组件</li></ol> <div class="language- extra-class"><pre class="language-text"><code>
+Vue.use(VueResource);
+
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/L-joy/myBlog.git/edit/master/vue/vue知识点总结6.md" target="_blank" rel="noopener noreferrer">博主通道__GitHub Private Repo ！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myBlog/vue/vue知识点总结5.html" class="prev">Vue.js - Day5 - Webpack</a></span> <span class="next"><a href="/myBlog/vue/vue知识点总结7.html">day7</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/myBlog/assets/js/app.2b5d794d.js" defer></script><script src="/myBlog/assets/js/3.b596bbc9.js" defer></script><script src="/myBlog/assets/js/2.61186235.js" defer></script><script src="/myBlog/assets/js/41.12835e45.js" defer></script>
+  </body>
+</html>
